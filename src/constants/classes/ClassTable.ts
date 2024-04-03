@@ -23,6 +23,14 @@ export const headersBase = [
     name: "Features",
     rowSpan: 2,
   },
+  {
+    name: "Rages",
+    rowSpan: 2,
+  },
+  {
+    name: "Rage Damage",
+    rowSpan: 2,
+  },
 ];
 
 export const casterHeaders = [

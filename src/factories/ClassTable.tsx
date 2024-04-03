@@ -1,10 +1,6 @@
 import React from "react";
-import { ClassTableData } from "../models/TableData";
-import {
-  spellLevels,
-  headersBase,
-  casterHeaders,
-} from "../constants/classes/ClassTable";
+import { ClassTableData } from "../models/ClassTableData";
+import { spellLevels } from "../constants/classes/ClassTable";
 
 interface ClassTableProps {
   tableData: ClassTableData[];
@@ -12,32 +8,74 @@ interface ClassTableProps {
 }
 
 const ClassTable: React.FC<ClassTableProps> = ({ tableData, isCaster }) => {
-  const headers = isCaster ? [...headersBase, ...casterHeaders] : headersBase;
+  const hasRages = tableData.some((row) => "rages" in row);
+  const hasRageDamage = tableData.some((row) => "rageDamage" in row);
 
   return (
     <table className="table table-striped">
       <thead>
         <tr className="Table _idGenTableRowColumn-3">
-          {headers.map((header, index) => (
+          <th className="Table Table-Header CellOverride-1" rowSpan={2}>
+            <p className="Table-Styles_Header--for-Table-Cell-Style- ParaOverride-3">
+              Level
+            </p>
+          </th>
+          <th
+            className="Table Table-Header CellOverride-1 _idGenCellOverride-1"
+            rowSpan={2}
+          >
+            <p className="Table-Styles_Header--for-Table-Cell-Style- ParaOverride-3">
+              Proficiency Bonus
+            </p>
+          </th>
+          <th
+            className="Table Table-Header CellOverride-1 _idGenCellOverride-1"
+            rowSpan={2}
+          >
+            <p className="Table-Styles_Header--for-Table-Cell-Style-">
+              Features
+            </p>
+          </th>
+          {isCaster ? (
             <th
-              key={index}
-              className="Table Table-Header CellOverride-1"
-              rowSpan={header.rowSpan}
-              colSpan={
-                (
-                  header as {
-                    name: string;
-                    colSpan: number;
-                    rowSpan?: undefined;
-                  }
-                ).colSpan
-              }
+              className="Table Table-Header CellOverride-1 _idGenCellOverride-1"
+              rowSpan={2}
             >
-              <p className="Table-Styles_Header--for-Table-Cell-Style- ParaOverride-3">
-                {header.name}
+              <p className="Table-Styles_Header--for-Table-Cell-Style-">
+                Cantrips Known
               </p>
             </th>
-          ))}
+          ) : null}
+          {isCaster ? (
+            <th
+              className="Table Table-Header CellOverride-1 _idGenCellOverride-1"
+              colSpan={9}
+            >
+              <p className="Table-Styles_Header--for-Table-Cell-Style-">
+                —Spell Slots per Spell Level—
+              </p>
+            </th>
+          ) : null}
+          {hasRages ? (
+            <th
+              className="Table Table-Header CellOverride-1 _idGenCellOverride-1"
+              rowSpan={2}
+            >
+              <p className="Table-Styles_Header--for-Table-Cell-Style-">
+                Rages
+              </p>
+            </th>
+          ) : null}
+          {hasRageDamage ? (
+            <th
+              className="Table Table-Header CellOverride-1 _idGenCellOverride-1"
+              rowSpan={2}
+            >
+              <p className="Table-Styles_Header--for-Table-Cell-Style-">
+                Rage Damage
+              </p>
+            </th>
+          ) : null}
         </tr>
         {isCaster && (
           <tr>
@@ -55,10 +93,12 @@ const ClassTable: React.FC<ClassTableProps> = ({ tableData, isCaster }) => {
             <th scope="row">{row.level}</th>
             <td>{row.proficiencyBonus}</td>
             <td>{row.features}</td>
+            {hasRages && <td>{row.rages}</td>}
+            {hasRageDamage && <td>{row.rageDamage}</td>}
             {isCaster && (
               <>
                 <td>{row.cantripsKnown}</td>
-                {row.spellSlots.map((spellSlot, index) => (
+                {row.spellSlots?.map((spellSlot, index) => (
                   <td key={index}>{spellSlot !== 0 ? spellSlot : "-"}</td>
                 ))}
               </>

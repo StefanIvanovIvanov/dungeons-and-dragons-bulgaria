@@ -1,4 +1,4 @@
-import { ClassTableData } from "../../models/TableData";
+import { ClassTableData } from "../../models/ClassTableData";
 
 export const cleric: ClassTableData[] = [
   {
