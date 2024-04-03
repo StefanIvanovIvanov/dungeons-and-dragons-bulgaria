@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import ClassesSidebar from "./ClassesSidebar";
 import TopNavigation from "../../navigation/TopNavigator";
+import ClassTable from "../../../factories/ClassTable";
+import { cleric } from "../../../constants/classes/Cleric";
 
-const Home: React.FC = () => {
+const Ranger: React.FC = () => {
   const [isSidebarToggled, setSidebarToggled] = useState<boolean>(false);
 
   const toggleSidebar = () => {
@@ -11,11 +14,16 @@ const Home: React.FC = () => {
   return (
     <>
       <div className={`d-flex`} id="wrapper">
+        <ClassesSidebar isSidebarToggled={isSidebarToggled} />
         <div id="page-content-wrapper">
-          <TopNavigation toggleSidebar={toggleSidebar} />
+          <TopNavigation
+            toggleSidebar={toggleSidebar}
+            isToggleButtonVisible={true}
+          />
           <div className="container-fluid">
             <h1 className="mt-4">Dungeons & Dragons Bulgaria</h1>
-            <p>Small introduction</p>
+            <p>Classes</p>
+            <h1>Ranger</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -25,6 +33,11 @@ const Home: React.FC = () => {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
+            <ClassTable tableData={cleric} isCaster={true} />
+            <h2>Class Features</h2>
+            <p>You gain the following class features</p>
+            <h4>Hit points</h4>
+            <p>Hit Dice: 1d8 per cleric level</p>
           </div>
         </div>
       </div>
@@ -32,4 +45,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Ranger;

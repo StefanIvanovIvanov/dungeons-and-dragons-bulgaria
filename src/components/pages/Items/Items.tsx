@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TopNavigation from "../../navigation/TopNavigator";
 
-const Home: React.FC = () => {
+const Items: React.FC = () => {
   const [isSidebarToggled, setSidebarToggled] = useState<boolean>(false);
 
   const toggleSidebar = () => {
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           <TopNavigation toggleSidebar={toggleSidebar} />
           <div className="container-fluid">
             <h1 className="mt-4">Dungeons & Dragons Bulgaria</h1>
-            <p>Small introduction</p>
+            <p>Items</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -32,4 +32,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Items;

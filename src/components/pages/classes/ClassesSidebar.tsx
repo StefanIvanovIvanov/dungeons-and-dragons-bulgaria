@@ -1,16 +1,22 @@
-import React from 'react';
-import Sidebar from "../../menu/Sidebar";
+import React from "react";
+import Sidebar from "../../navigation/Sidebar";
+import { classesSidebar } from "../../../constants/classes/Classes";
 
 interface ClassesSidebarProps {
-    isSidebarToggled: boolean;
+  isSidebarToggled: boolean;
 }
 
-const ClassesSidebar: React.FC<ClassesSidebarProps> = ({ isSidebarToggled }) => {
-    const properties: string[] = ['Bard', 'Cleric', 'Druid'];
-
-    return (
-        <Sidebar isSidebarToggled={isSidebarToggled} properties={properties}/>
-    );
-}
+const ClassesSidebar: React.FC<ClassesSidebarProps> = ({
+  isSidebarToggled,
+}) => {
+  return (
+    <div>
+      <Sidebar
+        isSidebarToggled={isSidebarToggled}
+        properties={classesSidebar}
+      />
+    </div>
+  );
+};
 
 export default ClassesSidebar;

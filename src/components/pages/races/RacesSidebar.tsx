@@ -1,16 +1,15 @@
-import React from 'react';
-import Sidebar from "../../menu/Sidebar";
+import React from "react";
+import Sidebar from "../../navigation/Sidebar";
+import { racesSidebar } from "../../../constants/races/Races";
 
 interface RacesSidebarProps {
-    isSidebarToggled: boolean;
+  isSidebarToggled: boolean;
 }
 
 const RacesSidebar: React.FC<RacesSidebarProps> = ({ isSidebarToggled }) => {
-    const properties: string[] = ['Elf', 'Human', 'Dwarf'];
-
-    return (
-        <Sidebar isSidebarToggled={isSidebarToggled} properties={properties}/>
-    );
-}
+  return (
+    <Sidebar isSidebarToggled={isSidebarToggled} properties={racesSidebar} />
+  );
+};
 
 export default RacesSidebar;
