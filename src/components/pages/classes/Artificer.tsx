@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ClassesSidebar from "./ClassesSidebar";
 import TopNavigation from "../../navigation/TopNavigator";
-import { cleric } from "../../../constants/classes/Cleric";
-import ClassTable from "../../../factories/ClassTable";
+import ClassTable from "../../../factories/ClassTable/ClassTable";
+import { artificer } from "../../../constants/classes/Artificer";
 
 const Artificer: React.FC = () => {
   const [isSidebarToggled, setSidebarToggled] = useState<boolean>(false);
@@ -33,7 +33,7 @@ const Artificer: React.FC = () => {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <ClassTable tableData={cleric} isCaster={true} />
+            <ClassTable tableData={artificer} />
             <h2>Class Features</h2>
             <p>You gain the following class features</p>
             <h4>Hit points</h4>

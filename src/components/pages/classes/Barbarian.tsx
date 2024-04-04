@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ClassesSidebar from "./ClassesSidebar";
 import TopNavigation from "../../navigation/TopNavigator";
-import ClassTable from "../../../factories/ClassTable";
+import ClassTable from "../../../factories/ClassTable/ClassTable";
 import { barbarian } from "../../../constants/classes/Barbarian";
 
 const Barbarian: React.FC = () => {
@@ -33,7 +33,7 @@ const Barbarian: React.FC = () => {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <ClassTable tableData={barbarian} isCaster={false} />
+            <ClassTable tableData={barbarian} />
             <h2>Class Features</h2>
             <p>You gain the following class features</p>
             <h4>Hit points</h4>
