@@ -1,6 +1,6 @@
-import { ClassTableData } from "../../models/ClassTableData";
+import { ClassesTableData } from "../../models/ClassesTable";
 
-export const fighter: ClassTableData[] = [
+export const fighter: ClassesTableData[] = [
   {
     level: 1,
     proficiencyBonus: "+2",

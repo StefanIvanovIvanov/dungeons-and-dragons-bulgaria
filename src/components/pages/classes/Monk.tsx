@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ClassesSidebar from "./ClassesSidebar";
 import TopNavigation from "../../navigation/TopNavigator";
-import ClassTable from "../../../factories/ClassTable/ClassTable";
+import ClassesTable from "../../../factories/ClassesTable/ClassesTable";
 import { monk } from "../../../constants/classes/Monk";
 
 const Monk: React.FC = () => {
@@ -23,7 +23,7 @@ const Monk: React.FC = () => {
           <div className="container-fluid">
             <h1 className="mt-4">Dungeons & Dragons Bulgaria</h1>
             <p>Classes</p>
-            <h1>MonkClassTable</h1>
+            <h1>Monk</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -33,7 +33,7 @@ const Monk: React.FC = () => {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <ClassTable tableData={monk} />
+            <ClassesTable tableData={monk} />
             <h2>Class Features</h2>
             <p>You gain the following class features</p>
             <h4>Hit points</h4>

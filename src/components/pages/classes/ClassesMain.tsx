@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import ClassesSidebar from "./ClassesSidebar";
 import TopNavigation from "../../navigation/TopNavigator";
-import ClassTable from "../../../factories/ClassTable/ClassTable";
-import { cleric } from "../../../constants/classes/Cleric";
+import { Link } from "react-router-dom";
+import clericImage from "../../../assets/images/classes/cleric.jpg";
+import ClassesListingCards from "./ClassesListingCards";
 
 const ClassesMain: React.FC = () => {
   const [isSidebarToggled, setSidebarToggled] = useState<boolean>(false);
@@ -33,11 +34,7 @@ const ClassesMain: React.FC = () => {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <ClassTable tableData={cleric} />
-            <h2>Class Features</h2>
-            <p>You gain the following class features</p>
-            <h4>Hit points</h4>
-            <p>Hit Dice: 1d8 per cleric level</p>
+            <ClassesListingCards />
           </div>
         </div>
       </div>

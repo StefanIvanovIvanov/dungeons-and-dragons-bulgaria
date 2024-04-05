@@ -1,4 +1,4 @@
-export interface ClassTableData {
+export interface ClassesTableData {
   level: number;
   proficiencyBonus: string;
   features: string;
