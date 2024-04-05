@@ -16,7 +16,7 @@ export const bard: ClassTableData[] = [
       "Jack of All Trades, Song of Rest (d6), Magical Inspiration (Optional)",
     cantripsKnown: "2",
     spellsKnown: "5",
-    spellSlots: [3, 2, 0, 0, 0, 0, 0, 0, 0],
+    spellSlots: [3, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     level: 3,
@@ -24,7 +24,7 @@ export const bard: ClassTableData[] = [
     features: "Bard College, Expertise",
     cantripsKnown: "2",
     spellsKnown: "6",
-    spellSlots: [4, 3, 2, 0, 0, 0, 0, 0, 0],
+    spellSlots: [4, 2, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     level: 4,
@@ -32,7 +32,7 @@ export const bard: ClassTableData[] = [
     features: "Ability Score Improvement, Bardic Versatility (Optional)",
     cantripsKnown: "3",
     spellsKnown: "7",
-    spellSlots: [4, 3, 3, 0, 0, 0, 0, 0, 0],
+    spellSlots: [4, 3, 0, 0, 0, 0, 0, 0, 0],
   },
   {
     level: 5,
@@ -40,7 +40,7 @@ export const bard: ClassTableData[] = [
     features: "Bardic Inspiration (d8), Font of Inspiration",
     cantripsKnown: "3",
     spellsKnown: "8",
-    spellSlots: [4, 3, 3, 2, 0, 0, 0, 0, 0],
+    spellSlots: [4, 3, 2, 0, 0, 0, 0, 0, 0],
   },
   {
     level: 6,
@@ -48,7 +48,7 @@ export const bard: ClassTableData[] = [
     features: "Countercharm, Bard College feature",
     cantripsKnown: "3",
     spellsKnown: "9",
-    spellSlots: [4, 3, 3, 3, 0, 0, 0, 0, 0],
+    spellSlots: [4, 3, 3, 0, 0, 0, 0, 0, 0],
   },
   {
     level: 7,
@@ -56,7 +56,7 @@ export const bard: ClassTableData[] = [
     features: "-",
     cantripsKnown: "3",
     spellsKnown: "10",
-    spellSlots: [4, 3, 3, 3, 1, 0, 0, 0, 0],
+    spellSlots: [4, 3, 3, 1, 0, 0, 0, 0, 0],
   },
   {
     level: 8,
@@ -64,7 +64,7 @@ export const bard: ClassTableData[] = [
     features: "Ability Score Improvement, Bardic Versatility (Optional)",
     cantripsKnown: "3",
     spellsKnown: "11",
-    spellSlots: [4, 3, 3, 3, 2, 0, 0, 0, 0],
+    spellSlots: [4, 3, 3, 2, 0, 0, 0, 0, 0],
   },
   {
     level: 9,
@@ -72,7 +72,7 @@ export const bard: ClassTableData[] = [
     features: "Song of Rest (d8)",
     cantripsKnown: "3",
     spellsKnown: "12",
-    spellSlots: [4, 3, 3, 3, 3, 1, 0, 0, 0],
+    spellSlots: [4, 3, 3, 3, 1, 0, 0, 0, 0],
   },
   {
     level: 10,
@@ -80,7 +80,7 @@ export const bard: ClassTableData[] = [
     features: "Bardic Inspiration (d10), Expertise, Magical Secrets",
     cantripsKnown: "4",
     spellsKnown: "14",
-    spellSlots: [4, 3, 3, 3, 3, 2, 0, 0, 0],
+    spellSlots: [4, 3, 3, 3, 2, 0, 0, 0, 0],
   },
   {
     level: 11,
@@ -88,7 +88,7 @@ export const bard: ClassTableData[] = [
     features: "-",
     cantripsKnown: "4",
     spellsKnown: "15",
-    spellSlots: [4, 3, 3, 3, 3, 2, 1, 0, 0],
+    spellSlots: [4, 3, 3, 3, 2, 1, 0, 0, 0],
   },
   {
     level: 12,
@@ -96,7 +96,7 @@ export const bard: ClassTableData[] = [
     features: "Ability Score Improvement, Bardic Versatility (Optional)",
     cantripsKnown: "4",
     spellsKnown: "15",
-    spellSlots: [4, 3, 3, 3, 3, 2, 1, 0, 0],
+    spellSlots: [4, 3, 3, 3, 2, 1, 0, 0, 0],
   },
   {
     level: 13,
@@ -104,7 +104,7 @@ export const bard: ClassTableData[] = [
     features: "Song of Rest (d10)",
     cantripsKnown: "4",
     spellsKnown: "16",
-    spellSlots: [4, 3, 3, 3, 3, 2, 1, 1, 0],
+    spellSlots: [4, 3, 3, 3, 2, 1, 1, 0, 0],
   },
   {
     level: 14,
@@ -112,7 +112,7 @@ export const bard: ClassTableData[] = [
     features: "Magical Secrets, Bard College feature",
     cantripsKnown: "4",
     spellsKnown: "18",
-    spellSlots: [4, 3, 3, 3, 3, 2, 1, 1, 0],
+    spellSlots: [4, 3, 3, 3, 2, 1, 1, 0, 0],
   },
   {
     level: 15,
@@ -120,7 +120,7 @@ export const bard: ClassTableData[] = [
     features: "Bardic Inspiration (d12)",
     cantripsKnown: "4",
     spellsKnown: "19",
-    spellSlots: [4, 3, 3, 3, 3, 2, 1, 1, 1],
+    spellSlots: [4, 3, 3, 3, 2, 1, 1, 1, 0],
   },
   {
     level: 16,
@@ -128,7 +128,7 @@ export const bard: ClassTableData[] = [
     features: "Ability Score Improvement, Bardic Versatility (Optional)",
     cantripsKnown: "4",
     spellsKnown: "19",
-    spellSlots: [4, 3, 3, 3, 3, 2, 1, 1, 1],
+    spellSlots: [4, 3, 3, 3, 2, 1, 1, 1, 0],
   },
   {
     level: 17,
@@ -136,7 +136,7 @@ export const bard: ClassTableData[] = [
     features: "Song of Rest (d12)",
     cantripsKnown: "4",
     spellsKnown: "20",
-    spellSlots: [4, 3, 3, 3, 3, 2, 1, 1, 1],
+    spellSlots: [4, 3, 3, 3, 2, 1, 1, 1, 1],
   },
   {
     level: 18,
@@ -144,7 +144,7 @@ export const bard: ClassTableData[] = [
     features: "Magical Secrets",
     cantripsKnown: "4",
     spellsKnown: "22",
-    spellSlots: [4, 3, 3, 3, 3, 3, 1, 1, 1],
+    spellSlots: [4, 3, 3, 3, 3, 1, 1, 1, 1],
   },
   {
     level: 19,
@@ -152,7 +152,7 @@ export const bard: ClassTableData[] = [
     features: "Ability Score Improvement, Bardic Versatility (Optional)",
     cantripsKnown: "4",
     spellsKnown: "22",
-    spellSlots: [4, 3, 3, 3, 3, 3, 2, 1, 1],
+    spellSlots: [4, 3, 3, 3, 3, 2, 1, 1, 1],
   },
   {
     level: 20,

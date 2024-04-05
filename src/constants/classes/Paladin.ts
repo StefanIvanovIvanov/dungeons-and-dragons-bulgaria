@@ -5,7 +5,7 @@ export const paladin: ClassTableData[] = [
     level: 1,
     proficiencyBonus: "+2",
     features: "Divine Sense, Lay on Hands",
-    spellSlots: [2, 0, 0, 0, 0],
+    spellSlots: [0, 0, 0, 0, 0],
   },
   {
     level: 2,
@@ -17,7 +17,7 @@ export const paladin: ClassTableData[] = [
     level: 3,
     proficiencyBonus: "+2",
     features: "Divine Health, Sacred Oath, Harness Divine Power (Optional)",
-    spellSlots: [2, 0, 0, 0, 0],
+    spellSlots: [3, 0, 0, 0, 0],
   },
   {
     level: 4,
