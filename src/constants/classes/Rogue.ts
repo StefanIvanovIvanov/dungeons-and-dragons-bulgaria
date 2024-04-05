@@ -1,6 +1,6 @@
-import { ClassTableData } from "../../models/ClassTableData";
+import { ClassesTableData } from "../../models/ClassesTable";
 
-export const rogue: ClassTableData[] = [
+export const rogue: ClassesTableData[] = [
   {
     level: 1,
     proficiencyBonus: "+2",

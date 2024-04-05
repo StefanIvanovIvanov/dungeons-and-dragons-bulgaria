@@ -1,12 +1,12 @@
 import React from "react";
-import { OptionalColumns } from "../../models/ClassTableData";
-import { spellLevels } from "../../constants/classes/ClassTable";
+import { OptionalColumns } from "../../models/ClassesTable";
+import { spellLevels } from "../../constants/classes/ClassesTable";
 
-interface ClassTableHeadersProps {
+interface ClassesTableHeadersProps {
   optionalColumns: OptionalColumns;
 }
 
-const ClassTableHeaders: React.FC<ClassTableHeadersProps> = ({
+const ClassesTableHeaders: React.FC<ClassesTableHeadersProps> = ({
   optionalColumns,
 }) => {
   return (
@@ -215,4 +215,4 @@ const ClassTableHeaders: React.FC<ClassTableHeadersProps> = ({
   );
 };
 
-export default ClassTableHeaders;
+export default ClassesTableHeaders;

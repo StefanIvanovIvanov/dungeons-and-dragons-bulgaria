@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ClassesSidebar from "./ClassesSidebar";
 import TopNavigation from "../../navigation/TopNavigator";
-import ClassTable from "../../../factories/ClassTable/ClassTable";
+import ClassesTable from "../../../factories/ClassesTable/ClassesTable";
 import { warlock } from "../../../constants/classes/Warlock";
 
 const Warlock: React.FC = () => {
@@ -33,7 +33,7 @@ const Warlock: React.FC = () => {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <ClassTable tableData={warlock} />
+            <ClassesTable tableData={warlock} />
             <h2>Class Features</h2>
             <p>You gain the following class features</p>
             <h4>Hit points</h4>

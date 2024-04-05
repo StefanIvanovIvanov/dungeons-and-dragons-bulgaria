@@ -1,14 +1,12 @@
 import React from "react";
-import { ClassTableData, OptionalColumns } from "../../models/ClassTableData";
-import ClassTableHeaders from "./ClassTableHeaders";
+import { ClassesTableData, OptionalColumns } from "../../models/ClassesTable";
+import ClassesTableHeaders from "./ClassesTableHeaders";
 
-interface ClassTableProps {
-  tableData: ClassTableData[];
+interface ClassesTableProps {
+  tableData: ClassesTableData[];
 }
 
-//to finish cleric druid, paladin, ranger, sorcerer
-
-const ClassTable: React.FC<ClassTableProps> = ({ tableData }) => {
+const ClassesTable: React.FC<ClassesTableProps> = ({ tableData }) => {
   const optionalColumns: OptionalColumns = {
     hasSpelSlotsLevelList:
       tableData.filter((row) => "spellSlots" in row).length > 0,
@@ -35,7 +33,7 @@ const ClassTable: React.FC<ClassTableProps> = ({ tableData }) => {
 
   return (
     <table className="table table-striped">
-      <ClassTableHeaders optionalColumns={optionalColumns} />
+      <ClassesTableHeaders optionalColumns={optionalColumns} />
       <tbody>
         {tableData.map((row, index) => (
           <tr key={index}>
@@ -80,4 +78,4 @@ const ClassTable: React.FC<ClassTableProps> = ({ tableData }) => {
   );
 };
 
-export default ClassTable;
+export default ClassesTable;

@@ -1,6 +1,6 @@
-import { ClassTableData } from "../../models/ClassTableData";
+import { ClassesTableData } from "../../models/ClassesTable";
 
-export const monk: ClassTableData[] = [
+export const monk: ClassesTableData[] = [
   {
     level: 1,
     proficiencyBonus: "+2",

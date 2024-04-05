@@ -1,6 +1,6 @@
-import { ClassTableData } from "../../models/ClassTableData";
+import { ClassesTableData } from "../../models/ClassesTable";
 
-export const wizard: ClassTableData[] = [
+export const wizard: ClassesTableData[] = [
   {
     level: 1,
     proficiencyBonus: "+2",
