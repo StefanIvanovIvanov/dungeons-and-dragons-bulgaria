@@ -6,6 +6,8 @@ interface ClassTableProps {
   tableData: ClassTableData[];
 }
 
+//to finish cleric druid, paladin, ranger, sorcerer
+
 const ClassTable: React.FC<ClassTableProps> = ({ tableData }) => {
   const optionalColumns: OptionalColumns = {
     hasSpelSlotsLevelList:
